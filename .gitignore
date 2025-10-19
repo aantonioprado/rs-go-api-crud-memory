@@ -1,0 +1,18 @@
+# Binaries
+bin/
+tmp/
+*.exe
+*.out
+*.test
+
+# Go build cache
+*.log
+*.env
+*.local
+*.swp
+.idea/
+.vscode/
+.DS_Store
+
+# Dependencies
+vendor/
