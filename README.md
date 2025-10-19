@@ -36,11 +36,6 @@ Construir uma API RESTful que gerencie usuários com operações de **(CRUD)** u
 └── go.sum
 ```
 
-### Sugerido (organização interna comum)
-- `internal/storage/memory`: implementação do “banco” em memória (map).
-- `internal/users`: modelo/validações e serviços (Find/Insert/Update/Delete).
-- `internal/http`: rotas e handlers (`/api/users` etc.).
-
 ---
 
 ## 👤 Schema do Usuário
