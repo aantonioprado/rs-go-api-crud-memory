@@ -1,10 +1,25 @@
 # API Crud Memory
 
-API REST em Go para CRUD de usuários com **armazenamento em memória** — ideal para praticar fundamentos de HTTP (métodos, status codes, headers) e manipulação de JSON em Go.
+API REST em Go desenvolvida como **desafio prático da Rocketseat**, com o objetivo de consolidar os fundamentos da linguagem Go e dos protocolos HTTP através da construção de uma API CRUD com armazenamento em memória.
+
+---
+
+## 🚀 Sobre o Desafio
+
+Este projeto faz parte de um **desafio da Rocketseat**, voltado para iniciantes em Go, com foco em desenvolver uma API REST que permita **Criar, Ler, Atualizar e Deletar (CRUD)** usuários, praticando conceitos como:
+
+- Estrutura de uma aplicação Go moderna;
+- Manipulação de rotas e métodos HTTP;
+- Respostas JSON e códigos de status;
+- Armazenamento em memória (map) simulando um banco de dados.
+
+---
 
 ## ✨ Objetivo
 
 Construir uma API RESTful que gerencie usuários com operações de **(CRUD)** usando um “banco de dados” em memória (map/Hash Map). Isso elimina a necessidade de persistência e foca no protocolo HTTP e no design da aplicação.
+
+---
 
 ## 🧱 Estrutura do Repositório
 
@@ -151,8 +166,7 @@ curl -X DELETE http://localhost:8080/api/users/<UUID>
 ## 🚀 Como rodar
 
 ### Pré-requisitos
-- Go instalado
-- (Opcional) [Air](https://github.com/cosmtrek/air) para hot reload — o repo contém `.air.toml`.
+- Go (1.24.3)
 
 ### Passos
 
@@ -164,14 +178,11 @@ cd rs-go-api-crud-memory
 # 2) Baixe dependências
 go mod download
 
-# 3a) Rodar em DEV com Air (se instalado)
-air
-
-# 3b) Ou rodar direto
+# 3) Iniciar a API
 go run ./cmd/api
 ```
 
-Por padrão, a aplicação expõe a API em `http://localhost:8080` (ajuste conforme a porta definida no seu `main`/env).
+Por padrão, a aplicação expõe a API em `http://localhost:3200` (ajuste conforme a porta definida no seu `main`/env).
 
 > O repositório contém `.env.example` para facilitar variáveis — copie para `.env` se necessário.
 
@@ -193,17 +204,3 @@ Use **Postman**, **Insomnia** ou `curl` (exemplos acima) para validar cada endpo
 - Leitura de lista e por ID inexistente
 - Atualização com payload inválido
 - Remoção e tentativa de re-remover (deve retornar 404)
-
----
-
-## 📦 Roadmap (sugestões)
-- Middleware de logging e correlação de requisição.
-- Validações com mensagens localizadas.
-- Paginação em `GET /api/users`.
-- Integração opcional com persistência (PostgreSQL) em outro branch.
-
----
-
-## 📄 Licença
-
-Defina a licença do projeto (ex.: MIT). Crie um `LICENSE` se ainda não houver.
